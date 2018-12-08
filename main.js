@@ -8,10 +8,12 @@ var app = new Vue({
         },
         show:true,
         fruits:[
-            'Apple',
-            'Pear',
-            'Banana'
+            {name:"apple", amount: 2},
+            {name:"banana", amount: 10},
+            {name:"pear", amount: 5},
         ]
     }
 })
 
+
+setTimeout(() => app.fruits.push({name:"Orange",amount: 7}),2000);
