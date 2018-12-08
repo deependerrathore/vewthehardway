@@ -6,7 +6,12 @@ var app = new Vue({
             first: "Deepender",
             last: "Rathore"
         },
-        show:true
+        show:true,
+        fruits:[
+            'Apple',
+            'Pear',
+            'Banana'
+        ]
     }
 })
 

@@ -16,7 +16,13 @@
         {{ name.first }} 
         <span v-if="show">{{name.last}}</span>
         </p>
+        <ul>
+            <li v-for="fruit in fruits">
+                {{fruit}}
+            </li>
+        </ul>        
     </div>
+    
 
     
     
