@@ -7,17 +7,14 @@
     <title>Vue</title>
 </head>
 <body> 
-    <div id="app1">
-        <span v-bind:title="message">
-            Pleaes hover over to see the title of the page
-        </span>
-        
-    </div>
 
     <div id="app">
-        {{ message }}
+        <span v-bind:title="message">
+            {{ message }}
+        </span>
         <p>
-        {{ name.first }} {{ name.initials}} {{name.last}}
+        {{ name.first }} 
+        <span v-if="show">{{name.last}}</span>
         </p>
     </div>
 
