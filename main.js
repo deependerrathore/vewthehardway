@@ -29,8 +29,8 @@ var methods = {
 
 var vm = new Vue({
     el:"#app",
-    data: data,
-    methods:methods,
+    data,
+    methods,
     created: function (){
         console.log(this.fruits)
         
