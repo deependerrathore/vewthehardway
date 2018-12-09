@@ -3,7 +3,7 @@ Vue.component('cart-item',{
     template:'<li>{{name }} - {{ amount}} per Kg</li>'
 })
 
-model = {
+data = {
     message: "Hello Vue",
     name:{
         first: "Deepender",
@@ -18,17 +18,19 @@ model = {
     ]
 }
 
+var methods = {
+    reverseMessage: function (){
+        this.message = this.message.split(' ').reverse().join(' ');
+    },
+    addFruit: function(){
+        this.fruits.push({name:this.fruit,amount: 1});
+    }
+}
+
 var vm = new Vue({
     el:"#app",
-    data: model,
-    methods:{
-        reverseMessage: function (){
-            this.message = this.message.split(' ').reverse().join(' ');
-        },
-        addFruit: function(){
-            this.fruits.push({name:this.fruit,amount: 1});
-        }
-    },
+    data: data,
+    methods:methods,
     created: function (){
         console.log(this.fruits)
         
