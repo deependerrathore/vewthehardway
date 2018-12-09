@@ -1,24 +1,27 @@
 Vue.component('cart-item',{
-    props:['item'],
-    template:'<li>{{ item.name }}</li>'
+    props:['name','amount'],
+    template:'<li>{{name }} - {{ amount}} per Kg</li>'
 })
+
+model = {
+    message: "Hello Vue",
+    name:{
+        first: "Deepender",
+        last: "Rathore"
+    },
+    show:true,
+    fruit:'grapse',
+    fruits:[
+        {name:"apple", amount: 2},
+        {name:"banana", amount: 10},
+        {name:"pear", amount: 5},
+    ]
+}
+Object.freeze(model);
 
 var app = new Vue({
     el:"#app",
-    data:{
-        message: "Hello Vue",
-        name:{
-            first: "Deepender",
-            last: "Rathore"
-        },
-        show:true,
-        fruit:'grapse',
-        fruits:[
-            {name:"apple", amount: 2},
-            {name:"banana", amount: 10},
-            {name:"pear", amount: 5},
-        ]
-    },
+    data: model,
     methods:{
         reverseMessage: function (){
             this.message = this.message.split(' ').reverse().join(' ');

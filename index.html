@@ -19,7 +19,8 @@
         <ul>
             <cart-item
             v-for="fruit in fruits"
-            v-bind:item="fruit"></cart-item>
+            v-bind:name="fruit.name"
+            v-bind:amount="fruit.amount"></cart-item>
 
             <!-- <li v-for="fruit in fruits">
                 
