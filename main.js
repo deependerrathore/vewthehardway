@@ -7,7 +7,7 @@ var app = new Vue({
             last: "Rathore"
         },
         show:true,
-        fruit:'orange',
+        fruit:'grapse',
         fruits:[
             {name:"apple", amount: 2},
             {name:"banana", amount: 10},
@@ -17,9 +17,12 @@ var app = new Vue({
     methods:{
         reverseMessage: function (){
             this.message = this.message.split(' ').reverse().join(' ');
+        },
+        addFruit: function(){
+            this.fruits.push({name:this.fruit,amount: 1});
         }
     }
 })
 
 
-setTimeout(() => app.fruits.push({name:"Orange",amount: 7}),2000);
+//setTimeout(() => app.fruits.push({name:"Orange",amount: 7}),2000);
