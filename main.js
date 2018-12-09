@@ -7,11 +7,17 @@ var app = new Vue({
             last: "Rathore"
         },
         show:true,
+        fruit:'orange',
         fruits:[
             {name:"apple", amount: 2},
             {name:"banana", amount: 10},
             {name:"pear", amount: 5},
         ]
+    },
+    methods:{
+        reverseMessage: function (){
+            this.message = this.message.split(' ').reverse().join(' ');
+        }
     }
 })
 
