@@ -22,7 +22,7 @@
                 {{fruit.name}} - {{fruit.amount}} Per Kg
             </li>
         </ul>
-        <input type="text" v-bind:value="fruit" />
+        <input type="text" v-model:value="fruit" />
         <input type="submit" v-on:click="addFruit" value="Add fruit"/>        
     </div>
     
