@@ -17,9 +17,8 @@ model = {
         {name:"pear", amount: 5},
     ]
 }
-Object.freeze(model);
 
-var app = new Vue({
+var vm = new Vue({
     el:"#app",
     data: model,
     methods:{
@@ -29,6 +28,10 @@ var app = new Vue({
         addFruit: function(){
             this.fruits.push({name:this.fruit,amount: 1});
         }
+    },
+    created: function (){
+        console.log(this.fruits)
+        
     }
 })
 
