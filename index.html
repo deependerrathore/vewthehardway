@@ -12,15 +12,19 @@
         <span v-bind:title="message">
             {{ message }}
         </span>
-        <button v-on:click="reverseMessage">Reverse Message</button>
         <p>
         {{ name.first }} 
         <span v-if="show">{{name.last}}</span>
         </p>
         <ul>
-            <li v-for="fruit in fruits">
+            <cart-item
+            v-for="fruit in fruits"
+            v-bind:item="fruit"></cart-item>
+
+            <!-- <li v-for="fruit in fruits">
+                
                 {{fruit.name}} - {{fruit.amount}} Per Kg
-            </li>
+            </li> -->
         </ul>
         <input type="text" v-model:value="fruit" />
         <input type="submit" v-on:click="addFruit" value="Add fruit"/>        

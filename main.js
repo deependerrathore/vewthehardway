@@ -1,3 +1,8 @@
+Vue.component('cart-item',{
+    props:['item'],
+    template:'<li>{{ item.name }}</li>'
+})
+
 var app = new Vue({
     el:"#app",
     data:{
