@@ -18,15 +18,17 @@
         </p>
         <ul id="cart-items">
             <cart-item
+            v-once
             v-for="fruit in fruits"
             v-bind:name="fruit.name"
             v-bind:amount="fruit.amount"></cart-item>
-
-            <!-- <li v-for="fruit in fruits">
-                
-                {{fruit.name}} - {{fruit.amount}} Per Kg
-            </li> -->
         </ul>
+        <ul id="cart-items">
+                <cart-item
+                v-for="fruit in fruits"
+                v-bind:name="fruit.name"
+                v-bind:amount="fruit.amount"></cart-item>
+            </ul>
         <input type="text" v-model:value="fruit" />
         <input type="submit" v-on:click="addFruit" value="Add fruit"/>        
     </div>
