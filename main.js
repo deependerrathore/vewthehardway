@@ -29,15 +29,22 @@ var methods = {
 
 var vm = new Vue({
     el:"#app",
-    template: '<div><span>{{fruit}}</span></div>',
     data,
     methods,
     beforeCreate:function(){
-        console.log(this.$data); //undefined
+        console.log(this.$el); //undefined
         
     }, 
     created: function (){
         console.log(this.$data);
+        
+    },
+    beforeMount: function (){
+        console.log(this.$el.innerHTML);//this will gets us the raw template
+        
+    },
+    mounted: function (){
+        console.log(this.$el.innerHTML); //this will gets us the HTML 
         
     }
 })
