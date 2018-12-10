@@ -9,7 +9,7 @@
 <body> 
 
     <div id="app">
-        <button v-on:click="isHidden = !isHidden">Toggle the secret message</button>
+        <button v-on:click="isHidden = isHidden ? false:true">Toggle the secret message</button>
         <p>Hidden status: {{ isHidden.toString().toUpperCase() }}</p>
         <p  v-bind:hidden="isHidden">Secret message</p>
         <span v-bind:title="message">
@@ -28,6 +28,7 @@
             </ul>
         <input type="text" v-model:value="fruit" />
         <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>        
+        <button v-on:focus="fruit = 'focused'">Focus me</button>
     </div>
     
 
