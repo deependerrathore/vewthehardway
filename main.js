@@ -30,30 +30,7 @@ var methods = {
 var vm = new Vue({
     el:"#app",
     data,
-    methods,
-    beforeCreate:function(){
-        console.log(this.$el); //undefined
-        
-    }, 
-    created: function (){
-        console.log(this.$data);
-        
-    },
-    beforeMount: function (){
-        console.log(this.$el.innerHTML);//this will gets us the raw template
-        
-    },
-    mounted: function (){
-        console.log(this.$el.innerHTML); //this will gets us the HTML 
-        
-    },
-    beforeUpdate: function(){
-        console.log(document.getElementById('cart-items').innerHTML.length);//76
-        
-    },
-    updated: function (){
-        console.log(document.getElementById('cart-items').innerHTML.length);//102
-    }
+    methods
 })
 
 

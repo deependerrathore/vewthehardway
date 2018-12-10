@@ -16,22 +16,15 @@
         {{ name.first }} 
         <span v-html="name.last" v-if="show">{{name.last}}</span>
         </p>
-        <ul v-once id="cart-items">
-            <li>{{fruit}}</li>
-            <cart-item
-            v-for="fruit in fruits"
-            v-bind:name="fruit.name"
-            v-bind:amount="fruit.amount"></cart-item>
-        </ul>
+   
         <ul id="cart-items">
-                <li>{{fruit}}</li>
                 <cart-item
                 v-for="fruit in fruits"
                 v-bind:name="fruit.name"
                 v-bind:amount="fruit.amount"></cart-item>
             </ul>
         <input type="text" v-model:value="fruit" />
-        <input type="submit" v-on:click="addFruit" value="Add fruit"/>        
+        <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>        
     </div>
     
 
