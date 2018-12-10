@@ -7,7 +7,7 @@ data = {
     message: "Hello Vue",
     name:{
         first: "Deepender",
-        last: "Rathore"
+        last: "<b>Rathore</b>"
     },
     show:true,
     fruit:'grapse',

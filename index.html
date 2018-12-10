@@ -14,7 +14,7 @@
         </span>
         <p>
         {{ name.first }} 
-        <span v-if="show">{{name.last}}</span>
+        <span v-html="name.last" v-if="show">{{name.last}}</span>
         </p>
         <ul v-once id="cart-items">
             <li>{{fruit}}</li>
