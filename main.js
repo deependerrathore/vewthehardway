@@ -31,8 +31,12 @@ var vm = new Vue({
     el:"#app",
     data,
     methods,
+    beforeCreate:function(){
+        console.log(this.$data); //undefined
+        
+    }, 
     created: function (){
-        console.log(this.fruits)
+        console.log(this.$data);
         
     }
 })
