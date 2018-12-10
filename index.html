@@ -16,7 +16,7 @@
         {{ name.first }} 
         <span v-if="show">{{name.last}}</span>
         </p>
-        <ul>
+        <ul id="cart-items">
             <cart-item
             v-for="fruit in fruits"
             v-bind:name="fruit.name"

@@ -46,6 +46,13 @@ var vm = new Vue({
     mounted: function (){
         console.log(this.$el.innerHTML); //this will gets us the HTML 
         
+    },
+    beforeUpdate: function(){
+        console.log(document.getElementById('cart-items').innerHTML.length);//76
+        
+    },
+    updated: function (){
+        console.log(document.getElementById('cart-items').innerHTML.length);//102
     }
 })
 
