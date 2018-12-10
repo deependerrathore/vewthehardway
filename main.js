@@ -4,6 +4,7 @@ Vue.component('cart-item',{
 })
 
 data = {
+    isHidden: false,
     message: "Hello Vue",
     name:{
         first: "Deepender",
