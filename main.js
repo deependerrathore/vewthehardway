@@ -28,6 +28,8 @@ var methods = {
 }
 
 var vm = new Vue({
+    el:"#app",
+    template: '<div><span>{{fruit}}</span></div>',
     data,
     methods,
     beforeCreate:function(){
@@ -40,5 +42,5 @@ var vm = new Vue({
     }
 })
 
-vm.$mount('#app');
+
 //setTimeout(() => app.fruits.push({name:"Orange",amount: 7}),2000);
