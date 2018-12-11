@@ -25,6 +25,9 @@ var methods = {
     },
     addFruit: function(){
         this.fruits.push({name:this.fruit,amount: 1});
+    },
+    displayFavouriteFruit: function(){
+        return 'Your favourite fruit is ' + this.fruit;
     }
 }
 

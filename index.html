@@ -27,7 +27,8 @@
                 :amount="fruit.amount"></cart-item>
             </ul>
         <input type="text" v-model:value="fruit" v-on:focus="fruit=''"/>
-        <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>        
+        <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>   
+        <p>{{ displayFavouriteFruit() }}</p>     
     </div>
     
 
