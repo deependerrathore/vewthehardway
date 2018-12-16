@@ -6,6 +6,8 @@ Vue.component('cart-item',{
 const vm = new Vue({
     el:"#app",
     data:{
+        fName: "Deepender",
+        lName: "Rathore",
         isHidden: false,
         message: "Hello Vue",
         name:{
@@ -32,6 +34,16 @@ const vm = new Vue({
         },
         countFruit:function(){
             return this.fruits.map(x=>x.amount).reduce((acc,cur) => acc + cur);
+        },
+        fullName: {
+            get:function(){
+                return this.fName + ' ' + this.lName; 
+            },
+            set:function(newName){
+                var names = newName.split(' ');
+                this.fName = names[0];
+                this.lName = names[names.length - 1];
+            }
         }
     }
 })

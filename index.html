@@ -9,6 +9,9 @@
 <body> 
 
     <div id="app">
+        <h1>Hello {{ fullName }}</h1>
+        <input v-model:value="fullName" />
+        <hr>
         <button @click="isHidden = isHidden ? false:true">Toggle the secret message</button>
         <p>Hidden status: {{ isHidden.toString().toUpperCase() }}</p>
         <p  v-bind:hidden="isHidden">Secret message</p>
