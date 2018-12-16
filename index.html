@@ -20,14 +20,16 @@
         <span v-html="name.last" v-if="show">{{name.last}}</span>
         </p>
    
+        <input type="text" v-model:value="fruit" v-on:focus="fruit=''"/>
+        <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>  
+        <p>Fruit Count: {{fruits.length}}</p> 
         <ul id="cart-items">
                 <cart-item
                 v-for="fruit in fruits"
                 :name="fruit.name"
                 :amount="fruit.amount"></cart-item>
             </ul>
-        <input type="text" v-model:value="fruit" v-on:focus="fruit=''"/>
-        <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>   
+        
         <p>{{ displayFavouriteFruit() }}</p>     
     </div>
     
