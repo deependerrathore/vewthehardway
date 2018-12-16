@@ -22,8 +22,8 @@
    
         <input type="text" v-model:value="fruit" v-on:focus="fruit=''"/>
         <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>  
-        <p>Entry Count: {{countFruit()}}</p> 
-        <p>Fruit Count: {{ fruits.map(x => x.amount).reduce((acc,cur)=>acc + cur)}}</p> 
+        <p>Entry Count: {{countEntry}}</p> 
+        <p>Fruit Count: {{ countFruit}}</p> 
 
         <ul id="cart-items">
                 <cart-item

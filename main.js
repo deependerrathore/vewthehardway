@@ -23,9 +23,15 @@ const vm = new Vue({
     methods:{
         addFruit: function(){
             this.fruits.push({name:this.fruit,amount: 1});
+        }
+        
+    },
+    computed:{
+        countEntry:function(){
+            return this.fruits.length;
         },
         countFruit:function(){
-            return this.fruits.length;
+            return this.fruits.map(x=>x.amount).reduce((acc,cur) => acc + cur);
         }
     }
 })
