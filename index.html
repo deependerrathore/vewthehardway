@@ -22,15 +22,13 @@
    
         <input type="text" v-model:value="fruit" v-on:focus="fruit=''"/>
         <input v-bind:disabled="false" type="submit" v-on:click="addFruit" value="Add fruit"/>  
-        <p>Fruit Count: {{fruits.length}}</p> 
+        <p>Entry Count: {{countFruit()}}</p> 
         <ul id="cart-items">
                 <cart-item
                 v-for="fruit in fruits"
                 :name="fruit.name"
                 :amount="fruit.amount"></cart-item>
             </ul>
-        
-        <p>{{ displayFavouriteFruit() }}</p>     
     </div>
     
 
